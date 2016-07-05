@@ -35,7 +35,7 @@
             "fieldValidateRulesMaxlength": "255"
         },
         {
-            "fieldName": "fracmento_libro",
+            "fieldName": "fragmento_libro",
             "fieldType": "String",
             "fieldValidateRules": [
                 "required",
