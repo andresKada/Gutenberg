@@ -1,0 +1,126 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myLibrosLabel" translate="gutenbergApp.libros.home.createOrEditLabel">Create or edit a Libros</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <!--div class="form-group" ng-show="vm.libros.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.libros.id" readonly />
+        </div-->
+        <div class="form-group">
+            <label class="control-label" translate="gutenbergApp.libros.nombre_libro" for="field_nombre_libro">Nombre Libro</label>
+            <input type="text" class="form-control" name="nombre_libro" id="field_nombre_libro"
+                    ng-model="vm.libros.nombre_libro"
+                    required ng-minlength="4" ng-maxlength="255" />
+            <div ng-show="editForm.nombre_libro.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nombre_libro.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.nombre_libro.$error.minlength" translate="entity.validation.minlength" translate-value-min="4">
+                    This field is required to be at least 4 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.nombre_libro.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="255">
+                    This field cannot be longer than 255 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="gutenbergApp.libros.nombre_autor" for="field_nombre_autor">Nombre Autor</label>
+            <input type="text" class="form-control" name="nombre_autor" id="field_nombre_autor"
+                    ng-model="vm.libros.nombre_autor"
+                    required ng-minlength="4" ng-maxlength="255" />
+            <div ng-show="editForm.nombre_autor.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nombre_autor.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.nombre_autor.$error.minlength" translate="entity.validation.minlength" translate-value-min="4">
+                    This field is required to be at least 4 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.nombre_autor.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="255">
+                    This field cannot be longer than 255 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="gutenbergApp.libros.editorial" for="field_editorial">Editorial</label>
+            <input type="text" class="form-control" name="editorial" id="field_editorial"
+                    ng-model="vm.libros.editorial"
+                    required ng-minlength="4" ng-maxlength="255" />
+            <div ng-show="editForm.editorial.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.editorial.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.editorial.$error.minlength" translate="entity.validation.minlength" translate-value-min="4">
+                    This field is required to be at least 4 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.editorial.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="255">
+                    This field cannot be longer than 255 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="gutenbergApp.libros.fragmento_libro" for="field_fragmento_libro">Fragmento Libro</label>
+            <textarea type="text" class="form-control" name="fragmento_libro" id="field_fragmento_libro"
+                    ng-model="vm.libros.fragmento_libro"
+                    required ng-minlength="4" ng-maxlength="500" />
+            <div ng-show="editForm.fragmento_libro.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.fragmento_libro.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.fragmento_libro.$error.minlength" translate="entity.validation.minlength" translate-value-min="4">
+                    This field is required to be at least 4 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.fragmento_libro.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="500">
+                    This field cannot be longer than 500 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="gutenbergApp.libros.stan_ubicacion" for="field_stan_ubicacion">Stan Ubicacion</label>
+            <input type="text" class="form-control" name="stan_ubicacion" id="field_stan_ubicacion"
+                    ng-model="vm.libros.stan_ubicacion"
+                    required ng-minlength="4" ng-maxlength="255" />
+            <div ng-show="editForm.stan_ubicacion.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.stan_ubicacion.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.stan_ubicacion.$error.minlength" translate="entity.validation.minlength" translate-value-min="4">
+                    This field is required to be at least 4 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.stan_ubicacion.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="255">
+                    This field cannot be longer than 255 characters.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

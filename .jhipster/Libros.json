@@ -1,0 +1,64 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "nombre_libro",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "4",
+            "fieldValidateRulesMaxlength": "255"
+        },
+        {
+            "fieldName": "nombre_autor",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "4",
+            "fieldValidateRulesMaxlength": "255"
+        },
+        {
+            "fieldName": "editorial",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "4",
+            "fieldValidateRulesMaxlength": "255"
+        },
+        {
+            "fieldName": "fracmento_libro",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "4",
+            "fieldValidateRulesMaxlength": "500"
+        },
+        {
+            "fieldName": "stan_ubicacion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "4",
+            "fieldValidateRulesMaxlength": "255"
+        }
+    ],
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "libros",
+    "pagination": "pagination"
+}

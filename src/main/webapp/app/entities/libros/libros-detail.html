@@ -1,0 +1,34 @@
+
+<div>
+    <h2><span translate="gutenbergApp.libros.detail.title">Libros</span></h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="gutenbergApp.libros.nombre_libro">Nombre Libro</span></dt>
+        <dd>
+            <span>{{vm.libros.nombre_libro}}</span>
+        </dd>
+        <dt><span translate="gutenbergApp.libros.nombre_autor">Nombre Autor</span></dt>
+        <dd>
+            <span>{{vm.libros.nombre_autor}}</span>
+        </dd>
+        <dt><span translate="gutenbergApp.libros.editorial">Editorial</span></dt>
+        <dd>
+            <span>{{vm.libros.editorial}}</span>
+        </dd>
+        <dt><span translate="gutenbergApp.libros.fragmento_libro">Fragmento Libro</span></dt>
+        <dd>
+            <span>{{vm.libros.fragmento_libro}}</span>
+        </dd>
+        <dt><span translate="gutenbergApp.libros.stan_ubicacion">Stan Ubicacion</span></dt>
+        <dd>
+            <span>{{vm.libros.stan_ubicacion}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

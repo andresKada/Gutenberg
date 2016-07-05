@@ -1,0 +1,26 @@
+{
+    "gutenbergApp": {
+        "libros" : {
+            "home": {
+                "title": "Libros",
+                "createLabel": "Create a new Libros",
+                "createOrEditLabel": "Create or edit a Libros",
+                "search": "Search for Libros"
+            },
+            "created": "A new Libros is created with identifier {{ param }}",
+            "updated": "A Libros is updated with identifier {{ param }}",
+            "deleted": "A Libros is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Libros {{ id }}?"
+            },
+            "detail": {
+                "title": "Libros"
+            },
+            "nombre_libro": "Nombre Libro",
+            "nombre_autor": "Nombre Autor",
+            "editorial": "Editorial",
+            "fragmento_libro": "Fragmento Libro",
+            "stan_ubicacion": "Stan Ubicacion"
+        }
+    }
+}
