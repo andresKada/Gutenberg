@@ -3,7 +3,9 @@
     <h2><span translate="gutenbergApp.libros.detail.title">Libros</span></h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
+    <div class="row">
     <dl class="dl-horizontal jh-entity-details">
+      <div id="testDiv" class="col-lg-6">
         <dt><span translate="gutenbergApp.libros.nombre_libro">Nombre Libro</span></dt>
         <dd>
             <span>{{vm.libros.nombre_libro}}</span>
@@ -24,11 +26,18 @@
         <dd>
             <span>{{vm.libros.stan_ubicacion}}</span>
         </dd>
+      </div>
     </dl>
-
+  </div>
+  <div class="row">
     <button type="submit"
             onclick="window.history.back()"
             class="btn btn-info">
         <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
     </button>
+
+    <a href="javascript:genPDF()"  class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>Descargar</span>
+    </a>
+  </div>
 </div>
