@@ -155,6 +155,49 @@
                     $state.go('^');
                 });
             }]
+        })
+
+        .state('libros-vista', {
+          parent: 'entity',
+          url: '/libros-vista',
+          data: {
+              authorities: ['ROLE_USER'],
+              pageTitle: 'gutenbergApp.libros.home.title'
+          },
+          views: {
+              'content@': {
+                  templateUrl: 'app/entities/libros/libros-vista.html',
+                  controller: 'LibrosController',
+                  controllerAs: 'vm'
+              }
+          },
+          params: {
+              page: {
+                  value: '1',
+                  squash: true
+              },
+              sort: {
+                  value: 'id,asc',
+                  squash: true
+              },
+              search: null
+          },
+          resolve: {
+              pagingParams: ['$stateParams', 'PaginationUtil', function ($stateParams, PaginationUtil) {
+                  return {
+                      page: PaginationUtil.parsePage($stateParams.page),
+                      sort: $stateParams.sort,
+                      predicate: PaginationUtil.parsePredicate($stateParams.sort),
+                      ascending: PaginationUtil.parseAscending($stateParams.sort),
+                      search: $stateParams.search
+                  };
+              }],
+              translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                  $translatePartialLoader.addPart('libros');
+                  $translatePartialLoader.addPart('global');
+                  return $translate.refresh();
+              }]
+          }
         });
     }
 

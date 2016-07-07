@@ -16,10 +16,10 @@
             "detail": {
                 "title": "Libros"
             },
-            "nombre_libro": "Nombre Libro",
-            "nombre_autor": "Nombre Autor",
+            "nombre_libro": "Nombre del Libro",
+            "nombre_autor": "Nombre del Autor",
             "editorial": "Editorial",
-            "fragmento_libro": "Fragmento Libro",
+            "fragmento_libro": "Fragmento del Libro",
             "stan_ubicacion": "Stan Ubicacion"
         }
     }
