@@ -1,41 +1,62 @@
-
-<div>
-    <h2><span translate="gutenbergApp.libros.detail.title">Libros</span></h2>
-    <hr>
-    <jhi-alert-error></jhi-alert-error>
-    <div class="row">
-    <dl class="dl-horizontal jh-entity-details">
+<div class="row">
+      <h2><span translate="gutenbergApp.libros.detail.title">Libros</span></h2>
+      <hr>
+      <jhi-alert-error></jhi-alert-error>
       <a href="javascript:imprSelec('muestra')">
-      <div print-section id="muestra" class="col-lg-10">
-        <dt><span translate="gutenbergApp.libros.nombre_libro">Nombre Libro</span></dt>
-        <dd>
-            <span>{{vm.libros.nombre_libro}}</span>
-        </dd>
-        <dt><span translate="gutenbergApp.libros.nombre_autor">Nombre Autor</span></dt>
-        <dd>
-            <span>{{vm.libros.nombre_autor}}</span>
-        </dd>
-        <dt><span translate="gutenbergApp.libros.editorial">Editorial</span></dt>
-        <dd>
-            <span>{{vm.libros.editorial}}</span>
-        </dd>
-        <dt><span translate="gutenbergApp.libros.fragmento_libro">Fragmento Libro</span></dt>
-        <dd>
-            <span>{{vm.libros.fragmento_libro}}</span>
-        </dd>
-        <dt><span translate="gutenbergApp.libros.stan_ubicacion">Stan Ubicacion</span></dt>
-        <dd>
-            <span>{{vm.libros.stan_ubicacion}}</span>
-        </dd>
-      </div>
-    </dl>
+        <div class="row col-lg-4 gu text-center col-lg-offset-4" print-section id="muestra">
+          <h3>Gutenberg</h3>
+          <div class="margin_h">
+            <h4>
+              <span class="fa fa-paragraph"></span>
+              <strong> Nombre Libro:</strong>
+              <span>{{vm.libros.nombre_libro}}</span>
+            </h4>
+          </div>
+
+          <div class="margin_h">
+            <h4>
+              <span class="glyphicon glyphicon-user"></span>
+              <strong> Autor:</strong>
+              <span>{{vm.libros.nombre_autor}}</span>
+            </h4>
+          </div>
+
+          <div class="margin_h">
+            <h4>
+              <span class="glyphicon glyphicon-book"></span>
+              <strong> Editorial:</strong>
+              <span>{{vm.libros.editorial}}</span>
+            </h4>
+          </div>
+
+          <div class="margin_h">
+            <h4>
+              <span class="fa fa-map-marker"></span>
+              <strong> Stand Ubicación:</strong>
+              <span>{{vm.libros.stan_ubicacion}}</span>
+            </h4>
+          </div>
+
+          <div class="margin_h">
+            <h4>
+              <span class="glyphicon glyphicon-bookmark"></span>
+              <strong> Fragmento:</strong>
+            </h4>
+          </div>
+          <p>{{vm.libros.fragmento_libro}}</p>
+        </div>
+      </a>
+
+    </div>
   </div>
-</a>
-  <div class="row">
-    <button type="submit"
-            onclick="window.history.back()"
-            class="btn btn-info">
-        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
-    </button>
-    </div
-</div>
+
+
+  <div>
+    <div class="row">
+      <button type="submit"
+              onclick="window.history.back()"
+              class="btn btn-info">
+          <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+      </button>
+    </div>
+  </div>

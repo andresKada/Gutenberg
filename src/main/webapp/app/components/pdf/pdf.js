@@ -8,7 +8,8 @@ function imprSelec(muestra) {
 }
 
 
-/*function genPDF(){
+/*
+function genPDF(){
 			html2canvas(document.getElementById("testDiv"), {
 				onrendered: function (canvas) {
 					var img = canvas.toDataURL("image/png");
@@ -19,6 +20,7 @@ function imprSelec(muestra) {
 			});
 		}
 
+/*
 document.getElementById("btnPrint").onclick = function () {
 	printElement(document.getElementById("printThis"));
 
