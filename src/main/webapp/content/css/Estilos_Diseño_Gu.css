@@ -1,0 +1,111 @@
+
+
+/* fondo conteneddores*/
+
+@font-face {
+  font-family: 'Open Sans';
+    src: local('Open Sans'), url('/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Lato';
+    src: local('Lato'), url('/fonts/Lato-Regular_0.ttf') format('truetype');
+}
+
+
+body {
+	font-family: Open Sans;
+}
+
+.gu {
+	background-color:#fff;
+	border:  1px solid #2c3e50;
+	color:#2c3e50;
+	padding: 10px;
+}
+ 
+
+p {
+	margin: 0 40px;
+	text-align: justify;
+    text-justify: inter-word;
+}
+
+h4 {
+	font-size: 16px;
+	margin: 5px 40px 10px 40px;
+
+}
+
+.margin_h {
+	margin: 20px 0;
+}
+
+h3 {
+	font-size: 20px;
+	margin: 5px 40px 20px 40px;
+	text-align: center;
+	font-family: 'Lato';
+
+}
+
+span.fa.fa-map-marker {
+	font-style: 30px !important;
+}
+
+hr {
+	margin-bottom: -5px;
+}
+
+
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: #30302d;
+  text-align: center;
+  height: 1.5em;
+  opacity: .7;
+}
+  .hr-text:before {
+    content: '';
+    background: linear-gradient(to right, transparent, #3a3935, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+  .hr-text:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: black;
+    padding: 0 .5em;
+    line-height: 1.5em;
+    color: #30302d;
+    background-color: #fcfcfa;
+  }
+
+
+
+  hr.style_hr { 
+  height: 30px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 1px 0 0 0; 
+  border-radius: 20px; 
+} 
+hr.style_hr:before { 
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -32px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 0 0 1px 0; 
+  border-radius: 20px; 
+}
+

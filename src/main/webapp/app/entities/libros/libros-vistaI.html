@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="/content/css/Estilos_Diseño_Gu.css">
+<link rel="stylesheet" href="/content/css/font-awesome.css">
+    <div class="row">
+        <div class="col-lg-4 gu text-center col-lg-offset-4" ng-repeat="libros in vm.libros track by libros.id">
+<a href="javascript:imprSelec('muestra')">
+            <div class="row" print-section id="muestra">
+
+              <h3>Gutenberg</h3>
+              <h4>
+                <hr class="hr-text" data-content="Libro:">
+              </h4>
+              <h4>
+                <span>{{libros.nombre_libro}}</span>
+              </h4>
+              <h4>
+                <hr class="hr-text" data-content="Autor:">
+              </h4>
+              <h4>
+                <span>{{libros.nombre_autor}}</span>
+              </h4>
+              <h4>
+                <hr class="hr-text" data-content="Editorial:">
+              </h4>
+              <h4>
+                <span>{{libros.editorial}}</span>
+              </h4>
+              <h4>
+                <hr class="hr-text" data-content="Stand Ubicación:">
+              </h4>
+              <h4>
+                <span>{{libros.stan_ubicacion}}</span>
+              </h4>
+              <h4>
+                <hr class="hr-text" data-content="Fragmento:">
+              </h4>
+              <p>
+                {{libros.fragmento_libro}}
+              </p>
+            </div>
+</a>
+        </div>
+    </div>
