@@ -1,10 +1,12 @@
 function imprSelec(muestra) {
     var ficha = document.getElementById(muestra);
     var ventimp = window.open(' ', 'popimpr');
+    ventimp.document.write('<html><head><title></title><link rel="stylesheet" href="../../content/css/estilos_gu.css"><link rel="stylesheet" href="../../content/css/font-awesome.css"></head><body>');
     ventimp.document.write(ficha.innerHTML);
+    ventimp.document.write('</body></html>');
     ventimp.document.close();
     ventimp.print();
-    ventimp.close();
+    //ventimp.close();
 }
 
 

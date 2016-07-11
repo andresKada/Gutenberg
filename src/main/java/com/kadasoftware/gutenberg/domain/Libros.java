@@ -45,6 +45,9 @@ public class Libros implements Serializable {
     @Field("stan_ubicacion")
     private String stan_ubicacion;
 
+    @Field("campoID")
+    private int campoID;
+
     public String getId() {
         return id;
     }
@@ -93,6 +96,14 @@ public class Libros implements Serializable {
         this.stan_ubicacion = stan_ubicacion;
     }
 
+    public int getCampoID() {
+        return campoID;
+    }
+
+    public void setCampoID(int campoID) {
+        this.campoID = campoID;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -121,6 +132,7 @@ public class Libros implements Serializable {
             ", nombre_autor='" + nombre_autor + "'" +
             ", editorial='" + editorial + "'" +
             ", fragmento_libro='" + fragmento_libro + "'" +
+            ", campoID='" + campoID + "'" +
             ", stan_ubicacion='" + stan_ubicacion + "'" +
             '}';
     }

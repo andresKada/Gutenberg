@@ -10,6 +10,8 @@
     function LibrosDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Libros) {
         var vm = this;
         vm.libros = entity;
+        vm.libros.campoID = vm.libros.campoID +1;
+        console.log(vm.libros.campoID);
 
         $timeout(function (){
             angular.element('.form-group:eq(0)>input').focus();

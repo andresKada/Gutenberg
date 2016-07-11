@@ -81,7 +81,7 @@
             data: {
                 authorities: ['ROLE_USER']
             },
-            onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
+            onEnter: ['$stateParams', '$state', '$uibModal', 'Libros', function($stateParams, $state, $uibModal, Libros) {
                 $uibModal.open({
                     templateUrl: 'app/entities/libros/libros-dialog.html',
                     controller: 'LibrosDialogController',
@@ -96,7 +96,8 @@
                                 editorial: null,
                                 fracmento_libro: null,
                                 stan_ubicacion: null,
-                                id: null
+                                id: null,
+                                campoID: Libros.campoID
                             };
                         }
                     }
