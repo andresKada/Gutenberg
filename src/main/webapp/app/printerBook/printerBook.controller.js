@@ -22,7 +22,7 @@
 
         function printBook(area) {
             var ficha = document.getElementById(area);
-            var ventimp = window.open(' ', 'popimpr', 'width=400, height=500');
+            var ventimp = window.open(' ', 'popimpr');
             ventimp.document.write('<html><head><title></title><link rel="stylesheet" href="../../content/css/estilos_gu.css"><link rel="stylesheet" href="../../content/css/font-awesome.css"></head><body>');
             ventimp.document.write(ficha.innerHTML);
             ventimp.document.write('</body></html>');
