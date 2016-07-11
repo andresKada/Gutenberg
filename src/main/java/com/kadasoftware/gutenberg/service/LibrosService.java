@@ -13,7 +13,7 @@ public interface LibrosService {
 
     /**
      * Save a libros.
-     * 
+     *
      * @param libros the entity to save
      * @return the persisted entity
      */
@@ -21,7 +21,7 @@ public interface LibrosService {
 
     /**
      *  Get all the libros.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
@@ -29,7 +29,7 @@ public interface LibrosService {
 
     /**
      *  Get the "id" libros.
-     *  
+     *
      *  @param id the id of the entity
      *  @return the entity
      */
@@ -37,8 +37,15 @@ public interface LibrosService {
 
     /**
      *  Delete the "id" libros.
-     *  
+     *
      *  @param id the id of the entity
      */
     void delete(String id);
+
+    /**
+     * Gets one libro by it's sequential number
+     *
+     * @return a book associated with the sequential number given
+     */
+    Libros findByConsecutivo();
 }

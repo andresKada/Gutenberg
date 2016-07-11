@@ -3,6 +3,8 @@ package com.kadasoftware.gutenberg.service.impl;
 import com.kadasoftware.gutenberg.service.LibrosService;
 import com.kadasoftware.gutenberg.domain.Libros;
 import com.kadasoftware.gutenberg.repository.LibrosRepository;
+
+import org.hibernate.annotations.Synchronize;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -11,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Service Implementation for managing Libros.
@@ -19,31 +22,35 @@ import java.util.List;
 public class LibrosServiceImpl implements LibrosService{
 
     private final Logger log = LoggerFactory.getLogger(LibrosServiceImpl.class);
-    
+
     @Inject
     private LibrosRepository librosRepository;
-    
+
     /**
      * Save a libros.
-     * 
+     *
      * @param libros the entity to save
      * @return the persisted entity
      */
     public Libros save(Libros libros) {
         log.debug("Request to save Libros : {}", libros);
-        Libros result = librosRepository.save(libros);
-        return result;
+
+        final Integer librosCount = (int) librosRepository.count();
+
+        libros.setConsecutivo(librosCount + 1);
+
+        return librosRepository.save(libros);
     }
 
     /**
      *  Get all the libros.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
     public Page<Libros> findAll(Pageable pageable) {
         log.debug("Request to get all Libros");
-        Page<Libros> result = librosRepository.findAll(pageable); 
+        Page<Libros> result = librosRepository.findAll(pageable);
         return result;
     }
 
@@ -61,11 +68,30 @@ public class LibrosServiceImpl implements LibrosService{
 
     /**
      *  Delete the  libros by id.
-     *  
+     *
      *  @param id the id of the entity
      */
     public void delete(String id) {
         log.debug("Request to delete Libros : {}", id);
         librosRepository.delete(id);
+    }
+
+    /**
+     * Gets one libro by it's sequential number
+     *
+     * @return a book associated with the sequential number given
+     */
+    public Libros findByConsecutivo() {
+
+        final int totalLibros =(int) librosRepository.count();
+
+        Random libroNumber = new Random();
+
+        int nextLibro;
+        do {
+            nextLibro = libroNumber.nextInt(totalLibros + 1);
+        } while (nextLibro == 0);
+
+        return librosRepository.findByConsecutivo(nextLibro);
     }
 }

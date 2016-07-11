@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-lg-4 gu text-center col-lg-offset-4" >
+
+        <div ng-click="vm.printBook('muestra')" >
+            <div class="row" print-section id="muestra">
+                <h6>KadaSoftware</h6><h3>Gutenberg</h3>
+                <div class="margin_h">
+                    <h4>
+                        <span class="fa fa-paragraph"></span>
+                        <strong> Nombre Libro:</strong>
+                        <span>{{vm.libros.nombre_libro}}</span>
+                    </h4>
+                </div>
+
+                <div class="margin_h">
+                    <h4>
+                        <span class="fa fa-user"></span>
+                        <strong> Autor:</strong>
+                        <span>{{vm.libros.nombre_autor}}</span>
+                    </h4>
+                </div>
+
+                <div class="margin_h">
+                    <h4>
+                        <span class="fa fa-book"></span>
+                        <strong> Editorial:</strong>
+                        <span>{{vm.libros.editorial}}</span>
+                    </h4>
+                </div>
+
+                <div class="margin_h">
+                    <h4>
+                        <span class="fa fa-map-marker"></span>
+                        <strong> Stand Ubicación:</strong>
+                        <span>{{vm.libros.stan_ubicacion}}</span>
+                    </h4>
+                </div>
+
+                <div class="margin_h">
+                    <h4>
+                        <span class="fa fa-bookmark"></span>
+                        <strong> Fragmento:</strong>
+                    </h4>
+                </div>
+                <p>{{vm.libros.fragmento_libro}}</p>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

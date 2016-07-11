@@ -1,5 +1,6 @@
 package com.kadasoftware.gutenberg.domain;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -44,6 +45,9 @@ public class Libros implements Serializable {
     @Size(min = 4, max = 255)
     @Field("stan_ubicacion")
     private String stan_ubicacion;
+
+    @Field("consecutivo")
+    private Integer consecutivo;
 
     public String getId() {
         return id;
@@ -93,35 +97,47 @@ public class Libros implements Serializable {
         this.stan_ubicacion = stan_ubicacion;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Libros libros = (Libros) o;
-        if(libros.id == null || id == null) {
-            return false;
-        }
-        return Objects.equals(id, libros.id);
+    public Integer getConsecutivo() {
+        return consecutivo;
+    }
+
+    public void setConsecutivo(final Integer consecutivo) {
+        this.consecutivo = consecutivo;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(id);
+        return Objects
+            .hash(id, nombre_libro, nombre_autor, editorial, fragmento_libro, stan_ubicacion,
+                  consecutivo);
     }
 
     @Override
+    public boolean equals(final Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        final Libros other = (Libros) obj;
+        return Objects.equals(this.id, other.id) && Objects
+            .equals(this.nombre_libro, other.nombre_libro) && Objects
+            .equals(this.nombre_autor, other.nombre_autor) && Objects
+            .equals(this.editorial, other.editorial) && Objects
+            .equals(this.fragmento_libro, other.fragmento_libro) && Objects
+            .equals(this.stan_ubicacion, other.stan_ubicacion) && Objects
+            .equals(this.consecutivo, other.consecutivo);
+    }
+
+
+    @Override
     public String toString() {
-        return "Libros{" +
-            "id=" + id +
-            ", nombre_libro='" + nombre_libro + "'" +
-            ", nombre_autor='" + nombre_autor + "'" +
-            ", editorial='" + editorial + "'" +
-            ", fragmento_libro='" + fragmento_libro + "'" +
-            ", stan_ubicacion='" + stan_ubicacion + "'" +
-            '}';
+        return new ToStringBuilder(this).append("id", id).append("nombre_libro", nombre_libro)
+                                        .append("nombre_autor", nombre_autor)
+                                        .append("editorial", editorial)
+                                        .append("fragmento_libro", fragmento_libro)
+                                        .append("stan_ubicacion", stan_ubicacion)
+                                        .append("consecutivo", consecutivo).toString();
     }
 }
