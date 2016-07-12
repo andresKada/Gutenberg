@@ -40,7 +40,7 @@ h4 {
 }
 
 .margin_h {
-	margin: 20px 0;
+	margin-top: 20px;
 }
 
 h3 {
@@ -124,16 +124,14 @@ hr.style_hr:before {
 
 img.logo_feria {
  width: 200px;
- margin-top: 20px;
- margin-bottom: 20px;
+ margin: 20px auto;
 }
 
 
 img.logo_foot{
- width:120px;
+ width:200px;
  margin-top: 10px;
  margin-bottom: 10px;
- display: inline-block;
 }
 
 img.logo_foot_kada{
@@ -143,11 +141,8 @@ img.logo_foot_kada{
 display: inline-block;
 }
 
-img.logo_foot_2{
- width:80px;
- margin-top: 10px;
- margin-bottom: 10px;
-display: inline-block;
+img.logo_gu{
+ margin-left: 20px;
 }
 
 .img_margin {

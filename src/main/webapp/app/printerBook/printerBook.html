@@ -1,44 +1,57 @@
 <div class="row">
-    <div class="col-lg-4 gu text-center col-lg-offset-4" >
+    <div class="col-lg-4 gu text-center col-lg-offset-4">
 
-        <div ng-click="vm.printBook('muestra')" >
-            <div class="row" print-section id="muestra">
-                <h3>KadaSoftware - Gutenberg</h3>
-                <div class="margin_h">
-                    <h4>
+        <div ng-click="vm.printBook('muestra')">
+            <div id="muestra">
+                <div class="row" print-section>
+                    <div class="margin_h img_margin">
+                         <img src="../content/images/gutenberg-06.png" class="image-responsive logo_gu">
+                         <br>
+                        <img src="../content/images/logo-llevar-leyendo-alfa.png" class="image-responsive logo_feria">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="margin_h">
+                        <h4>
                         <span class="fa fa-paragraph"></span>
-                        <strong> Nombre Libro:</strong>
+                        <strong>Libro:</strong>
                         <span>{{vm.libros.nombre_libro}}</span>
                     </h4>
-                </div>
+                    </div>
 
-                <div class="margin_h">
-                    <h4>
+
+                    <div class="margin_h">
+                        <h4>
                         <span class="fa fa-user"></span>
-                        <strong> Autor:</strong>
+                        <strong>Autor:</strong>
                         <span>{{vm.libros.nombre_autor}}</span>
                     </h4>
-                </div>
+                    </div>
 
-                <div class="margin_h">
-                    <h4>
+                    <div class="margin_h">
+                        <h4>
                         <span class="fa fa-book"></span>
-                        <strong> Editorial:</strong>
+                        <strong>Editorial:</strong>
                         <span>{{vm.libros.editorial}}</span>
                     </h4>
-                </div>
+                    </div>
 
-                <div class="margin_h">
-                    <h4>
+                    <div class="margin_h">
+                        <h4>
                         <span class="fa fa-bookmark"></span>
-                        <strong> Fragmento:</strong>
+                        <strong>Fragmento:</strong>
                     </h4>
+                    </div>
+                    <p>{{vm.libros.fragmento_libro}}</p>
                 </div>
-                <p>{{vm.libros.fragmento_libro}}</p>
+                <div class="row">
+                    <div class="margin_h">
+                        <div class="img_margin">
+                            <img src="../content/images/logos_foot-07.png" class="image-responsive logo_foot center-block">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
-
-
 </div>
