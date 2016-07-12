@@ -158,3 +158,29 @@ img.logo_gu{
   resize: vertical;
   min-height: 150px;
 }
+
+
+
+/* ultimos estilos*/
+.logo_PL {
+	width: 100%;
+}
+
+
+
+.logos_todos {
+	width: 90%;
+}
+
+
+@media (max-width: 1999px){
+	.logo_PL {
+	width: 60%;
+  }
+
+  .logos_todos {
+	width: 90%;
+  }
+
+
+}
