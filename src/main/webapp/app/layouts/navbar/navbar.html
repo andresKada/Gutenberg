@@ -1,5 +1,5 @@
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container">
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" ng-click="vm.toggleNavbar()">
                 <span class="sr-only">Toggle navigation</span>
@@ -8,8 +8,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand logo" href="#/" ng-click="vm.collapseNavbar()">
-                <img class="logo-img" src="content/images/logo-jhipster.png"/>
-                <span translate="global.title">Gutenberg</span> <span class="navbar-version">v{{VERSION}}</span>
+                <img class="logo-img" src="content/images/gutenberg-04.png"/>
             </a>
         </div>
         <div class="navbar-collapse" uib-collapse="vm.isNavbarCollapsed" ng-switch="vm.isAuthenticated()">

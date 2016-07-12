@@ -44,7 +44,7 @@ h4 {
 }
 
 h3 {
-	font-size: 14px;
+	font-size: 20px;
 	margin: 5px 40px 20px 40px;
 	text-align: center;
 	font-family: 'Lato';
@@ -108,4 +108,58 @@ hr.style_hr:before {
   border-color: #8c8b8b;
   border-width: 0 0 1px 0;
   border-radius: 20px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+
+.txtP{
+  font-size: 14px;
+}
+
+
+/* ultimos estilos*/
+
+
+img.logo_feria {
+ width: 200px;
+ margin-top: 20px;
+ margin-bottom: 20px;
+}
+
+
+img.logo_foot{
+ width:120px;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ display: inline-block;
+}
+
+img.logo_foot_kada{
+ width: 130px;
+ margin-top: 10px;
+ margin-bottom: 10px;
+display: inline-block;
+}
+
+img.logo_foot_2{
+ width:80px;
+ margin-top: 10px;
+ margin-bottom: 10px;
+display: inline-block;
+}
+
+.img_margin {
+    margin-left: 30px;
+}
+
+.top {
+  margin-top: 10px;
+}
+
+.resizable
+{
+  resize: vertical;
+  min-height: 150px;
 }

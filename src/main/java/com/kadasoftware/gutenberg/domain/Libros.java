@@ -41,7 +41,7 @@ public class Libros implements Serializable {
     @Field("fragmento_libro")
     private String fragmento_libro;
 
-    @NotNull
+  
     @Size(min = 4, max = 255)
     @Field("stan_ubicacion")
     private String stan_ubicacion;
