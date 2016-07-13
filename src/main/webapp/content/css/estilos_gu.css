@@ -156,7 +156,7 @@ img.logo_gu{
 .resizable
 {
   resize: vertical;
-  min-height: 150px;
+  min-height: 120px;
 }
 
 
@@ -181,6 +181,14 @@ img.logo_gu{
   .logos_todos {
 	width: 90%;
   }
+}
 
+@media (max-width: 649px){
+	.logo_PL {
+	width: 30%;
+  }
 
+  .logos_todos {
+	width: 45%;
+  }
 }
