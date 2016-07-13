@@ -20,6 +20,7 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
                         <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
                     </button>
+                    <br>
                     <label class="control-label" translate="gutenbergApp.libros.nombre_libro" for="field_nombre_libro">Nombre Libro</label>
                     <input type="text" class="form-control" name="nombre_libro" id="field_nombre_libro" ng-model="vm.libros.nombre_libro" required ng-minlength="4" ng-maxlength="255" />
                     <div ng-show="editForm.nombre_libro.$invalid">
